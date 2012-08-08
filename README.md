@@ -5,6 +5,10 @@ jmig's QuickConfig
 * gitignore
 * gitconfig
 * vimrc
+* zshrc
+
+##oh-my-zsh theme
+* jmig.zsh-theme
 
 ##Hook Git
 
