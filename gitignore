@@ -1,0 +1,14 @@
+#Xcode
+build/*
+*.mode1v3
+*.mode2v3
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.xcodeproj/xcuserdata/
+
+#Just in case
+.svn
+
+#Mac OS Junk files
+.DS_Store
