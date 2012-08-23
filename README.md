@@ -14,3 +14,6 @@ jmig's QuickConfig
 
 * pre-commit : Remove trailing whitespaces
 
+##SublimeText2 Plugins
+
+* RsyncProducteev is a SublimeText Plugin that Rsync your project with the dev server when pressing CMD+U
