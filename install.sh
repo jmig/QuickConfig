@@ -118,6 +118,19 @@ echo "\033[0;32m>>>\033[0m 4. Installing vim config"
 
 check_and_install_config_file "vimrc"
 
+
+######################
+#    Term Notifier   #
+######################
+echo "";
+echo "\033[0;32m>>>\033[0m 5. Installing terminal-notifier"
+if /usr/bin/which -s terminal-notifier
+then
+  echo "\033[0;33mYou already have terminal-notifier installed.\033[0m"
+else
+  sudo gem install terminal-notifier
+fi
+
 echo "";
 echo "";
 echo "\033[0;32mInstallation OK!!!";
