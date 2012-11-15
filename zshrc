@@ -12,15 +12,6 @@ ZSH_THEME="jmig"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='l'
 
-#Producteev Alias (use autojump instead?)
-alias pflowerly="cd ~/Workspace/iOS/flowerly/"
-alias piphone="cd ~/Workspace/iOS/ProducteeviPhonev5/"
-alias pengine="cd ~/Workspace/iOS/ProducteeviPhonev5/vendor/ProducteevCocoaEngine"
-alias pweb="cd /Library/WebServer/Documents/www.localproducteev.com"
-alias pmac="cd ~/Workspace/MacOS/ProducteevMac"
-alias pmacengine="cd ~/Workspace/MacOS/ProducteevMac/vendor/ProducteevCocoaEngine"
-alias pipad="cd ~/Workspace/iOS/ProducteeviPad/"
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
