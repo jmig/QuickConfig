@@ -1,6 +1,6 @@
 #!/bin/sh
 
-prompt_user_for_install(){ 
+prompt_user_for_install(){
   while true; do
       #action is $1
       #name is $2
@@ -129,6 +129,18 @@ then
   echo "\033[0;33mYou already have terminal-notifier installed.\033[0m"
 else
   sudo gem install terminal-notifier
+fi
+
+######################
+#      AppleDoc      #
+######################
+echo "";
+echo "\033[0;32m>>>\033[0m 6. Installing appledoc"
+if /usr/bin/which -s appledoc
+then
+  echo "\033[0;33mYou already have appledoc installed.\033[0m"
+else
+  brew install appledoc
 fi
 
 echo "";
