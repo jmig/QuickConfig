@@ -56,6 +56,8 @@ keepBackup = false
 keepTemporaries = false
 trustExitCode = false
 
+[push]
+        default = simple
+
 [github]
 	user = jmig
-	token = YourGitHubTokenShouldNotBePublic
