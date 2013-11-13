@@ -161,6 +161,19 @@ fi
 cp ./jmig.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/jmig.dvtcolortheme
 
 
+######################
+#       xctool       #
+######################
+echo "";
+echo "\033[0;32m>>>\033[0m 8. Installing xctool"
+if /usr/bin/which -s xctool
+then
+  echo "\033[0;33mYou already have xctool installed.\033[0m"
+else
+  brew install xctool
+fi
+
+
 echo "";
 echo "";
 echo "\033[0;32mInstallation OK!!!";
