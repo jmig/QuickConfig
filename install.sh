@@ -143,6 +143,24 @@ else
   brew install appledoc
 fi
 
+######################
+#    XCode Theme     #
+######################
+echo "";
+echo "\033[0;32m>>>\033[0m 7. Installing XCode theme"
+if [ -f ~/Library/Developer/Xcode/UserData/FontAndColorThemes/jmig.dvtcolortheme ] || [ -h ~/Library/Developer/Xcode/UserData/FontAndColorThemes/jmig.dvtcolortheme ]
+then
+  echo "\033[0;33mDeleting previous jmig Xcode theme\033[0m";
+  rm ~/Library/Developer/Xcode/UserData/FontAndColorThemes/jmig.dvtcolortheme;
+fi
+echo "\033[0;34mInstalling jmig Xcode theme\033[0m"
+if [ ! -d ~/Library/Developer/Xcode/UserData/FontAndColorThemes/ ]
+then
+  mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+fi
+cp ./jmig.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/jmig.dvtcolortheme
+
+
 echo "";
 echo "";
 echo "\033[0;32mInstallation OK!!!";
