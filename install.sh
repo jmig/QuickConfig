@@ -159,6 +159,10 @@ then
   mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
 fi
 cp ./jmig.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/jmig.dvtcolortheme
+#This theme needs the font Inconsolata by Raph Levien
+echo "\033[0;34mDownloading & Installing Inconsolata Font by Raph Levien\033[0m"
+curl -SL "http://levien.com/type/myfonts/Inconsolata.otf" > Inconsolota.otf
+mv Inconsolota.otf ~/Library/Fonts/Inconsolata.otf
 
 
 ######################
