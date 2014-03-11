@@ -178,6 +178,28 @@ else
 fi
 
 
+######################
+#       chisel       #
+######################
+echo "";
+echo "\033[0;32m>>>\033[0m 8. Installing chisel"
+
+if (brew list | grep -x chisel)
+then
+  echo "\033[0;33mYou already have Chisel installed.\033[0m"
+else
+  touch ~/.lldbinit
+  brew install chisel
+  CHISEL_CMD_LINE=`brew info chisel | tail -1 | sed -e 's/^ *//' -e 's/ *$//'`
+  if grep -Fxq "$CHISEL_CMD_LINE" ~/.lldbinit
+  then
+    echo "\033[0;33m.lldbinit already with Chisel installed.\033[0m"
+  else
+    echo $CHISEL_CMD_LINE >> ~/.lldbinit
+  fi
+fi
+
+
 echo "";
 echo "";
 echo "\033[0;32mInstallation OK!!!";
