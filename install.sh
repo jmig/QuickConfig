@@ -94,18 +94,18 @@ fi
 
 check_and_install_config_file "gitconfig"
 
-if grep -q YourGitHubTokenShouldNotBePublic ~/.gitconfig
-then
-  echo "\033[0;33mYour github token is not set.\033[0m"
-  if prompt_user_for_install "enter" "it now"
-  then
-    read -p "Please enter your GitHub Token:" token
-    sed -i "" s/YourGitHubTokenShouldNotBePublic/$token/ ~/.gitconfig
-    echo "\033[0;32mGitHub Token set.\033[0m"
-  else
-    echo "\033[0;34mSkipping install of your GitHub token\033[0m";
-  fi
-fi
+# if grep -q YourGitHubTokenShouldNotBePublic ~/.gitconfig
+# then
+#   echo "\033[0;33mYour github token is not set.\033[0m"
+#   if prompt_user_for_install "enter" "it now"
+#   then
+#     read -p "Please enter your GitHub Token:" token
+#     sed -i "" s/YourGitHubTokenShouldNotBePublic/$token/ ~/.gitconfig
+#     echo "\033[0;32mGitHub Token set.\033[0m"
+#   else
+#     echo "\033[0;34mSkipping install of your GitHub token\033[0m";
+#   fi
+# fi
 
 check_and_install_config_file "gitignore"
 

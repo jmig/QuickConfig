@@ -61,3 +61,6 @@ trustExitCode = false
 
 [github]
 	user = jmig
+
+[credential]
+    helper = osxkeychain
