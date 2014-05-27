@@ -93,28 +93,27 @@ else
 fi
 
 check_and_install_config_file "gitconfig"
-
-# if grep -q YourGitHubTokenShouldNotBePublic ~/.gitconfig
-# then
-#   echo "\033[0;33mYour github token is not set.\033[0m"
-#   if prompt_user_for_install "enter" "it now"
-#   then
-#     read -p "Please enter your GitHub Token:" token
-#     sed -i "" s/YourGitHubTokenShouldNotBePublic/$token/ ~/.gitconfig
-#     echo "\033[0;32mGitHub Token set.\033[0m"
-#   else
-#     echo "\033[0;34mSkipping install of your GitHub token\033[0m";
-#   fi
-# fi
-
 check_and_install_config_file "gitignore"
 
+######################
+#         RVM        #
+######################
+
+echo "";
+echo "\033[0;32m>>>\033[0m 4. Installing rvm & Ruby"
+
+if prompt_user_for_install "install rvm and latest ruby stable" ""
+then
+  curl -sSL https://get.rvm.io | bash -s stable --ruby --auto-dotfiles
+else
+  echo "\033[0;34mSkipping install of rvm/ruby\033[0m";
+fi
 
 ######################
 #         Vim        #
 ######################
 echo "";
-echo "\033[0;32m>>>\033[0m 4. Installing vim config"
+echo "\033[0;32m>>>\033[0m 5. Installing vim config"
 
 check_and_install_config_file "vimrc"
 
@@ -123,19 +122,19 @@ check_and_install_config_file "vimrc"
 #    Term Notifier   #
 ######################
 echo "";
-echo "\033[0;32m>>>\033[0m 5. Installing terminal-notifier"
+echo "\033[0;32m>>>\033[0m 6. Installing terminal-notifier"
 if /usr/bin/which -s terminal-notifier
 then
   echo "\033[0;33mYou already have terminal-notifier installed.\033[0m"
 else
-  sudo gem install terminal-notifier
+  gem install terminal-notifier
 fi
 
 ######################
 #      AppleDoc      #
 ######################
 echo "";
-echo "\033[0;32m>>>\033[0m 6. Installing appledoc"
+echo "\033[0;32m>>>\033[0m 7. Installing appledoc"
 if /usr/bin/which -s appledoc
 then
   echo "\033[0;33mYou already have appledoc installed.\033[0m"
@@ -147,7 +146,7 @@ fi
 #    XCode Theme     #
 ######################
 echo "";
-echo "\033[0;32m>>>\033[0m 7. Installing XCode theme"
+echo "\033[0;32m>>>\033[0m 8. Installing XCode theme"
 if [ -f ~/Library/Developer/Xcode/UserData/FontAndColorThemes/jmig.dvtcolortheme ] || [ -h ~/Library/Developer/Xcode/UserData/FontAndColorThemes/jmig.dvtcolortheme ]
 then
   echo "\033[0;33mDeleting previous jmig Xcode theme\033[0m";
@@ -169,7 +168,7 @@ mv Inconsolota.otf ~/Library/Fonts/Inconsolata.otf
 #       xctool       #
 ######################
 echo "";
-echo "\033[0;32m>>>\033[0m 8. Installing xctool"
+echo "\033[0;32m>>>\033[0m 9. Installing xctool"
 if /usr/bin/which -s xctool
 then
   echo "\033[0;33mYou already have xctool installed.\033[0m"
@@ -182,7 +181,7 @@ fi
 #       chisel       #
 ######################
 echo "";
-echo "\033[0;32m>>>\033[0m 8. Installing chisel"
+echo "\033[0;32m>>>\033[0m 10. Installing chisel"
 
 if (brew list | grep -x chisel)
 then
